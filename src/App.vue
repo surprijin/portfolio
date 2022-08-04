@@ -46,9 +46,6 @@
         behavior: "smooth"
       });
     },
-    gotoGithub: function(){
-      window.open("https://github.com/surprijin", "_blank");
-    }
   },
   components: {
     intro,
