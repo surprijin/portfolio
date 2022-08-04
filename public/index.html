@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./common.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <noscript>
@@ -13,5 +16,59 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function navOn() {
+        var nowTop = $(window).scrollTop();
+		
+        var sec1_offset = $('#intro').offset().top;
+        var sec2_offset = $('#about').offset().top - 400;
+        var sec3_offset = $('#skills').offset().top - 400;
+        var sec4_offset = $('#project').offset().top - 400;
+        var sec5_offset = $('#cloning').offset().top - 400;
+        var sec6_offset = $('#cloning').offset().top + 400;
+        
+        $('.list').removeClass('active');
+        $('.sdlist').removeClass('sdactive');
+        
+      
+        if ( nowTop >=  0 && nowTop < sec2_offset) {
+            $('.list').eq(0).addClass('active');
+            $('.sdlist').eq(0).addClass('sdactive');
+        } else if( nowTop >=  sec2_offset && nowTop < sec3_offset ) {
+            $('.list').eq(1).addClass('active');
+            $('.sdlist').eq(1).addClass('sdactive');
+        } else if( nowTop >=  sec3_offset && nowTop < sec4_offset ) {
+            $('.list').eq(2).addClass('active');
+            $('.sdlist').eq(2).addClass('sdactive');
+        } else if( nowTop >=  sec4_offset && nowTop < sec5_offset ) {
+            $('.list').eq(3).addClass('active');
+            $('.sdlist').eq(3).addClass('sdactive');
+        } else if( nowTop >=  sec5_offset && nowTop < sec6_offset ) {
+            $('.list').eq(4).addClass('active');
+            $('.sdlist').eq(4).addClass('sdactive');
+        } else if( nowTop >=  sec6_offset){
+            $('.list').eq(5).addClass('active');
+            $('.sdlist').eq(5).addClass('sdactive');
+        }
+    };
+
+      $(window).scroll(function(){
+
+        navOn();
+
+        var height = $(window).scrollTop();
+
+        if(height >= 800) {
+          $('.sidemenu').fadeIn(600);
+        }
+
+        if(height >= 1200) {
+          $('.skills').css('display','block');
+        }
+      });
+
+    </script>
   </body>
 </html>
