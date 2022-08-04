@@ -31,7 +31,7 @@
       <li v-on:click="gotocloning" class="mlist">CLONING</li>
       <li v-on:click="gotocontact" class="mlist">CONTACT</li>
     </ul>
-    <div class="giticon" @click="gotoGithub()"></div>
+    <div class="giticon" onclick="window.open('https://github.com/surprijin');"></div>
   </div>
   <nav class="sidemenu">
       <ul>
@@ -104,9 +104,6 @@ export default {
         contact.scrollIntoView({behavior:'smooth'})
       }
     },
-    gotoGithub: function(){
-      window.open("https://github.com/surprijin", "_blank");
-    }
   },
 }
 </script>

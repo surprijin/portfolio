@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn" @click="gotoSeomun()">WEB</button>
+            <button class="btn" onclick="window.open('https://seomunmarket.herokuapp.com/');">WEB</button>
         </div>
     </section>
 </template>
@@ -36,11 +36,6 @@
 
 export default {
     name:"seomunDetail",
-    methods: {
-      gotoSeomun: function(){
-      window.open("https://seomunmarket.herokuapp.com/", "_blank");
-    }
-    },
 }
 </script>
 

@@ -9,7 +9,7 @@
         </p>
         <p class="email">surprijin@naver.com</p>
         <p class="phone">+82) 010 - 2038 - 0538</p>
-        <div class="giticon"  @click="gotoGithub()">
+        <div class="giticon" onclick="window.open('https://github.com/surprijin');">
           <div></div>
         </div>
       </div>
@@ -20,11 +20,6 @@
 <script>
 export default {
   name: 'contact-page',
-  methods: {
-    gotoGithub: function(){
-      window.open("https://github.com/surprijin", "_blank");
-    }
-  },
 }
 </script>
 

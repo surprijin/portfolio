@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn" @click="gotoHilton()">WEB</button>
+            <button class="btn" onclick="window.open('https://hiltonseoulfinal.herokuapp.com/');">WEB</button>
         </div>
     </section>
 </template>

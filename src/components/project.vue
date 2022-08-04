@@ -25,7 +25,7 @@
           </div>
           <div class="project_btn seomun_linkbtn">
             <button class="btn mockup_btn" @click="seomunMockup = true">MOCKUP</button>
-            <button class="btn web_btn" @click="gotoSeomun()">WEB</button>
+            <button class="btn web_btn" onclick="window.open('https://seomunmarket.herokuapp.com/');">WEB</button>
           </div>
         </div>
         <div class="project_img seomun_img">
@@ -66,7 +66,7 @@
           </div>
           <div class="project_btn hilton_linkbtn">
             <button class="btn mockup_btn" @click="hiltonMockup = true">MOCKUP</button>
-            <button class="btn web_btn" @click="gotoHilton()">WEB</button>
+            <button class="btn web_btn" onclick="window.open('https://hiltonseoulfinal.herokuapp.com/');">WEB</button>
           </div>
       </div>
       </div>
@@ -98,14 +98,6 @@ export default {
       seomun: false,
       hilton: false,
     };
-  },
-  methods: {
-      gotoHilton: function(){
-      window.open("https://hiltonseoulfinal.herokuapp.com/", "_blank");
-    }, 
-    gotoSeomun: function(){
-      window.open("https://seomunmarket.herokuapp.com/", "_blank");
-    }
   },
   components: {
     seomunDetail,
